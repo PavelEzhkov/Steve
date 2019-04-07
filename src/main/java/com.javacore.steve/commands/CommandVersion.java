@@ -1,7 +1,9 @@
 package com.javacore.steve.commands;
 
 import com.javacore.steve.Application;
-
+/**
+ * Extend {@link ACommand} to show Steve version
+ */
 public class CommandVersion extends ACommand {
 
     public CommandVersion(String name, String description) {

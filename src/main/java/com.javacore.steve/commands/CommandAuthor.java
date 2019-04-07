@@ -2,6 +2,10 @@ package com.javacore.steve.commands;
 
 import com.javacore.steve.Application;
 
+/**
+ * Extend {@link ACommand} to show author name
+ */
+
 public class CommandAuthor extends ACommand {
 
 

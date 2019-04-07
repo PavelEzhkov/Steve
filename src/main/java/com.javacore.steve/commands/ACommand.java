@@ -1,5 +1,10 @@
 package com.javacore.steve.commands;
 
+/**
+ * Abstract class uses to execute commands
+ */
+
+
 public abstract class ACommand {
     private String name;
     private String description;
@@ -7,6 +12,10 @@ public abstract class ACommand {
     public String getDescription() {
         return description;
     }
+    /**Setter method
+     * @param name command name
+     * @param description command description
+     */
 
     public ACommand(String name, String description) {
         this.name = name;

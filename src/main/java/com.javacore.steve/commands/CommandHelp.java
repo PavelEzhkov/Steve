@@ -1,5 +1,9 @@
 package com.javacore.steve.commands;
 
+/**
+ * Extend {@link ACommand} to show commands list
+ */
+
 public class CommandHelp extends ACommand {
 
 
