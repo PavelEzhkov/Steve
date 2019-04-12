@@ -19,17 +19,15 @@ public enum CommandRegistry {
         commands.put("creator", commandAuthor);
         commands.put("father", commandAuthor);
         commands.put("version", new CommandVersion("version", " - prints current version"));
+        commands.put("weather", new CommandWeather("weather", " - prints weather"));
+        commands.put("time", new CommandTime("time", " - prints current time"));
     }
 
     /*public boolean hasCommand(String name) {
         return commands.containsKey(name);
     }*/
 
-    /**
-     * Need to return command by name
-     * @param name
-     * @return command from map
-     */
+
 
     public ACommand getCommands(String name) {
         return commands.get(name);
@@ -42,6 +40,6 @@ public enum CommandRegistry {
         for (Map.Entry<String,ACommand> entry : commands.entrySet()){
             System.out.println(entry.getKey() + entry.getValue().getDescription());
         }
-        System.out.println("Bye - exit programme");
+        System.out.println("bye - exit programme");
     }
 }
