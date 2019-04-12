@@ -13,6 +13,7 @@ public class CommandHelp extends ACommand {
 
     @Override
     public void execute() {
+        System.out.println("I can do this commands. Maybe i understand this in context, but you should separate the command with spaces.");
         CommandRegistry.INSTANCE.listCommands();
     }
 }

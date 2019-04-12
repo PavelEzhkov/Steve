@@ -23,9 +23,9 @@ public enum CommandRegistry {
         commands.put("time", new CommandTime("time", " - prints current time"));
     }
 
-    /*public boolean hasCommand(String name) {
+    public boolean hasCommand(String name) {
         return commands.containsKey(name);
-    }*/
+    }
 
 
 

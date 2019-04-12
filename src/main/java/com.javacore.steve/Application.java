@@ -11,22 +11,24 @@ import java.util.Scanner;
  * Application is the main entity will be using to start work with Steve
  *
  * @author Pavel Ezhkov
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 public class Application {
     public static final String APP_NAME = "Steve";
     public static final String AUTHOR = "Pavel Ezhkov";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.0.2";
     private static ApplicationState currentState;
 
     public static void main(String[] args) {
-        changeState(new StateIdle(),"idle");
+        changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
         String commandName;
 
         while (true) {
-            commandName = scanner.next().toLowerCase();
+            String newString = scanner.nextLine();
+            commandName = CommandParser.pars(newString.toLowerCase());
+            //System.out.println(commandName);
             if (commandName.equals("bye"))
                 break;
             currentState.onCommand(commandName);
@@ -35,9 +37,10 @@ public class Application {
 
     public static void changeState(ApplicationState newState, String commandName) {
         if (currentState != null) {
-            currentState.exit();}
-            currentState = newState;
-            currentState.enter(commandName);
+            currentState.exit();
         }
+        currentState = newState;
+        currentState.enter(commandName);
+    }
 
 }
