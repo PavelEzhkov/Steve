@@ -1,7 +1,7 @@
 package com.javacore.steve;
 
-import com.javacore.steve.commands.ACommand;
-import com.javacore.steve.commands.CommandRegistry;
+import com.javacore.steve.helpers.CommandParser;
+import com.javacore.steve.profile.ProfileController;
 import com.javacore.steve.state.ApplicationState;
 import com.javacore.steve.state.StateIdle;
 
@@ -21,7 +21,11 @@ public class Application {
     private static ApplicationState currentState;
 
     public static void main(String[] args) {
-        changeState(new StateIdle(), "idle");
+        ProfileController profileController = new ProfileController();
+        profileController.showProfile(6);
+
+
+        /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
         String commandName;
 
@@ -32,7 +36,7 @@ public class Application {
             if (commandName.equals("bye"))
                 break;
             currentState.onCommand(commandName);
-        }
+        }*/
     }
 
     public static void changeState(ApplicationState newState, String commandName) {

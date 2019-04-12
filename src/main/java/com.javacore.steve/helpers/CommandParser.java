@@ -1,10 +1,10 @@
-package com.javacore.steve;
+package com.javacore.steve.helpers;
 
 import com.javacore.steve.commands.CommandRegistry;
 
-class CommandParser {
+public class CommandParser {
 
-    static String pars(String commandName) {
+    public static String pars(String commandName) {
         String[] words = commandName.split(" ");
         for (String string : words
         ) {
