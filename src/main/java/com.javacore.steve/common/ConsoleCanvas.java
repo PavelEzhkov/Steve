@@ -1,44 +1,6 @@
 package com.javacore.steve.common;
 
 public class ConsoleCanvas extends Canvas {
-
-    private char[][] pixels;
-    private int width;
-    private int height;
-
-    public  ConsoleCanvas(int width, int height){
-        this.height=height;
-        this.width=width;
-        init();
-    }
-
-    public void init(){
-        pixels= new char[height][width];
-        reset();
-    }
-
-    private void reset(){
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                pixels[i][j]='.';
-            }
-        }
-    }
-
-    public void draw(){
-        for (int i = 0; i < height; i++) {
-            System.out.println();
-            for (int j = 0; j < width; j++) {
-                System.out.print(pixels[i][j]);
-            }
-        }
-    }
-
-
-    public void setSymbolAt(int x, int y, char symbol){
-        pixels[y][x] = symbol;
-    }
-
     @Override
     public void drawText(String text) {
         System.out.println(text);
@@ -47,41 +9,24 @@ public class ConsoleCanvas extends Canvas {
 
     @Override
     public void drawSquare(int size) {
-
-    }
-
-    public void drawSquareAt(int x, int y, int size){
-        //to DO
-        for (int i = x; i < x+size; i++) {
-            setSymbolAt(i,y,'#');
+        if (size<2){
+            System.out.println("No square of such size allowed");
         }
-        for (int i = y+1; i < y+size-1; i++){
-            setSymbolAt(x,i,'#');
-            setSymbolAt(x+size-1,i,'#');
+        System.out.print("\n");
+        for (int i = 0; i < size; i++) {
+            System.out.print("#");
         }
-        for (int i = x; i < x+size; i++) {
-            setSymbolAt(i,y+size-1,'#');
-        }
-    }
-    public void drawCircleAt(int x, int y, int radius){
-
-        for (int i = x-radius+1; i < x+radius; i++) {
-            setSymbolAt(i,y,'#');
-        }
-
-
-        //aaaaa help
-        for (int i = 1; i < radius; i++) {
-            for (int j = 0; j < radius; j++) {
-                setSymbolAt(x-radius+j,y+i,'#');
-                setSymbolAt(x-radius+j,y-i,'#');
-                ;
-                //radius--;
+        System.out.println();
+        for (int i = 1; i < size-1; i++) {
+            System.out.print("#");
+            for (int j = 1; j < size-1; j++) {
+                System.out.print(" ");
             }
-
+            System.out.println("#");
         }
-    }
-    public void drawTestAt(int x, int y, String text){
-
+        for (int i = 0; i < size; i++) {
+            System.out.print("#");
+        }
+        System.out.println();
     }
 }

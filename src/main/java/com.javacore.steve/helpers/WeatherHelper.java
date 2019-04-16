@@ -3,11 +3,15 @@ package com.javacore.steve.helpers;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
+import org.openweathermap.api.DataWeatherClient;
+import org.openweathermap.api.UrlConnectionDataWeatherClient;
+import org.openweathermap.api.model.forecast.ForecastInformation;
+import org.openweathermap.api.model.forecast.daily.DailyForecast;
+import org.openweathermap.api.query.Language;
+import org.openweathermap.api.query.QueryBuilderPicker;
+import org.openweathermap.api.query.UnitFormat;
+import org.openweathermap.api.query.forecast.daily.ByCityName;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +24,31 @@ public class WeatherHelper {
     }
 
     private static final String API_KEY ="4f850c64b1fab5268c29242452d686ab";
-    private static final String LOCATION ="Saint%20Petersburg,Ru";
+    private static final String LOCATION =",Ru";
     //private  String urlString ="https://samples.openweathermap.org/data/2.5/forecast?q=" + LOCATION + "&appid=" + API_KEY;
     private  String urlString ="https://samples.openweathermap.org/data/2.5/weather?q=" + LOCATION + "&appid=" + API_KEY;
 
+    public WeatherHelper()  {
+        DataWeatherClient client = new UrlConnectionDataWeatherClient(API_KEY);
+        ByCityName byCityNameForecast = QueryBuilderPicker.pick()
+                .forecast().                                       // get forecast
+                // it should be dailt
+                .byCityName("Saint%20Petersburg")                              // for Kharkiv city
+                //.countryCode("UA")                                  // in Ukraine
+                //.unitFormat(UnitFormat.METRIC)                      // in Metric units
+                //.language(Language.ENGLISH)                         // in English
+                .build();
+        ForecastInformation<DailyForecast> forecastInformation = client.getForecastInformation("http://api.openweathermap.org/data/2.5/forecast?q=Saint%20Petersburg&appid=4f850c64b1fab5268c29242452d686ab");
+        System.out.println(forecastInformation.getCity());
+        for (DailyForecast forecast : forecastInformation.getForecasts()) {
+            System.out.println(String.format("Temperature on %s will be: %s",
+                    forecast.getDateTime().toString(), forecast.getTemperature().toString()));
+        }
 
-    public WeatherHelper(){
+
+
+    }
+    /*public WeatherHelper(){
         try {
             StringBuilder result = new StringBuilder();
             URL url = new URL(urlString);
@@ -47,6 +70,6 @@ public class WeatherHelper {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }
