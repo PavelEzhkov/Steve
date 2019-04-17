@@ -29,21 +29,7 @@ public class WeatherHelper {
     private  String urlString ="https://samples.openweathermap.org/data/2.5/weather?q=" + LOCATION + "&appid=" + API_KEY;
 
     public WeatherHelper()  {
-        DataWeatherClient client = new UrlConnectionDataWeatherClient(API_KEY);
-        ByCityName byCityNameForecast = QueryBuilderPicker.pick()
-                .forecast().                                       // get forecast
-                // it should be dailt
-                .byCityName("Saint%20Petersburg")                              // for Kharkiv city
-                //.countryCode("UA")                                  // in Ukraine
-                //.unitFormat(UnitFormat.METRIC)                      // in Metric units
-                //.language(Language.ENGLISH)                         // in English
-                .build();
-        ForecastInformation<DailyForecast> forecastInformation = client.getForecastInformation("http://api.openweathermap.org/data/2.5/forecast?q=Saint%20Petersburg&appid=4f850c64b1fab5268c29242452d686ab");
-        System.out.println(forecastInformation.getCity());
-        for (DailyForecast forecast : forecastInformation.getForecasts()) {
-            System.out.println(String.format("Temperature on %s will be: %s",
-                    forecast.getDateTime().toString(), forecast.getTemperature().toString()));
-        }
+
 
 
 

@@ -2,7 +2,11 @@ package com.javacore.steve.helpers;
 
 import com.javacore.steve.commands.CommandRegistry;
 
-public class CommandParser {
+import java.util.Arrays;
+import java.util.List;
+
+public enum  CommandParser {
+    INSTANCE;
 
     public static String pars(String commandName) {
         String[] words = commandName.split(" ");
@@ -13,4 +17,11 @@ public class CommandParser {
         }
         return "help";
     }
+
+     public List<String> parsSQLRequest(String request){
+
+        List<String> result = Arrays.asList(request.toLowerCase().split(" = |, |,| "));
+
+        return result;
+     }
 }
