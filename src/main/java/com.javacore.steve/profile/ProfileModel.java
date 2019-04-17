@@ -6,6 +6,7 @@ public class ProfileModel extends BaseModel {
     private int id;
     private String firstName;
     private String lastName;
+    private String nickname;
     private boolean active;
 
     public static ProfileModel randomModel() {

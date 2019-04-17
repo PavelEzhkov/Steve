@@ -69,7 +69,7 @@ public class ConsoleCanvas extends Canvas {
         for (int i = x-radius+1; i <x+radius ; i++) {
             for (int j = y-radius+1; j <y+radius ; j++) {
                 //0.8 only for nicer picture =)
-                if(Math.rint(Math.pow(i-x,2)+(Math.pow(j-y,2)))<radius*radius*0.8)setSymbolAt(i, j, '#');
+                if((Math.pow(i-x,2)+(Math.pow(j-y,2)))<radius*radius*0.8)setSymbolAt(i, j, '#');
             }
         }
     }

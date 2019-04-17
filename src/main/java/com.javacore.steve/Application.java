@@ -10,6 +10,7 @@ import db.Record;
 import db.Table;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,7 +28,52 @@ public class Application {
     private static ApplicationState currentState;
 
     public static void main(String[] args) {
+        List<String[]> records = DataBase.readDataFile("//criminals.tdl");
+        Table table = new Table("Criminls", Arrays.asList(new String[]{"id","name","deceased"}));
+        for (String[] s: records
+             ) {
+            Record record = new Record(table);
+            record.setValues(s);
+            table.insert(record);
 
+        }
+
+        System.out.println("All's ok");
+
+        /**
+         * example of sinhronized
+         */
+        /*
+        final DataBase dataBase = new DataBase();
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                dataBase.select();
+                }
+        };
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                  dataBase.update();
+
+            }
+        };
+        thread.start();
+        (new Thread((runnable))).start();
+*/
+
+
+        /**
+         * test DB
+         */
+
+        /*
         List<String> columns = new ArrayList<>();
         columns.add("id");
         columns.add("firstname");
@@ -54,20 +100,24 @@ public class Application {
         //
         //criminalTable.select();
 
+*/
 
-
-
-/*
-        ConsoleCanvas canvas = new ConsoleCanvas(75,75);
+        /**
+         * test Canvas
+         */
+        //ConsoleCanvas canvas = new ConsoleCanvas(75,75);
         //canvas.setSymbolAt(0,2,'A');
         //canvas.drawSquareAt(2,4,5);
-        canvas.drawCircleAt(37,37,10);
+        //canvas.drawCircleAt(37,37,25);
         //canvas.drawTestAt(1,6,"asdfdhgfdhfdghsdfgljksrgehklsergnklgsrdhlkasfghlkfasgjh");
-        canvas.draw();
-*/
+        //canvas.draw();
 
         // ProfileController profileController = new ProfileController();
         // profileController.showProfile(6);
+
+        /**
+         * test Threads
+         */
 
         /*
         Thread thread = new Thread(){
@@ -121,6 +171,9 @@ public class Application {
         thread.start();
 */
 
+        /**
+         * test Commands
+         */
 
         /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);

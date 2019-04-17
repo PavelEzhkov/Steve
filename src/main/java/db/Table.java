@@ -72,4 +72,9 @@ public class Table {
     public String getName() {
         return name;
     }
+
+
+    public List<String> getColumns(){
+        return columns;
+    }
 }
