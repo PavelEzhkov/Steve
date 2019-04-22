@@ -2,12 +2,18 @@ package com.javacore.steve.profile;
 
 import com.javacore.steve.common.BaseModel;
 
+import java.util.Date;
+
 public class ProfileModel extends BaseModel {
     private int id;
     private String firstName;
     private String lastName;
     private String nickname;
+    private int crimeFamelyId;
+    private String dateOfBirth;
     private boolean active;
+    private String dateOfDeath;
+    private int numberOfCrimes;
 
     public static ProfileModel randomModel() {
         int rId = (int) (10 * Math.random());

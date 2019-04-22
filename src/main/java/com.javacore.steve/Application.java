@@ -28,6 +28,11 @@ public class Application {
     private static ApplicationState currentState;
 
     public static void main(String[] args) {
+
+        ProfileController profileController= new ProfileController();
+        profileController.showProfile("Test");
+
+        /*
         List<String[]> records = DataBase.readDataFile("//criminals.tdl");
         Table table = new Table("Criminls", Arrays.asList(new String[]{"id","name","deceased"}));
         for (String[] s: records
@@ -38,7 +43,7 @@ public class Application {
 
         }
 
-        System.out.println("All's ok");
+        System.out.println("All's ok");*/
 
         /**
          * example of sinhronized

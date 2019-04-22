@@ -20,8 +20,14 @@ public class ProfileController {
             System.out.println("No record found  with id: " + id);
         } else {
             view.setModel(model);
-            view.draw(canvas);
+            canvas = new ConsoleCanvas(80,200);
+            view.drawToConsole(canvas);
         }
+    }
+    public void showProfile(String text) {
+            canvas = new ConsoleCanvas(80,200);
+            view = new ProfileView();
+            view.drawToConsole(canvas);
     }
 
 
