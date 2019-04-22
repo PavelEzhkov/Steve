@@ -34,6 +34,19 @@ public class Record {
         return Integer.parseInt(values.get(index));
     }
 
+    public int getInt(String fieldName, int defaultValue) throws FileNotFoundException{
+        int index = columns.indexOf(fieldName);
+        if (index==-1){
+            throw  new FileNotFoundException("FIELD NOT FOUND: " + fieldName);
+        }
+        String valueString = values.get(index);
+        if (valueString == null){
+            return defaultValue;
+        }
+        return Integer.parseInt(valueString);
+
+    }
+
     public boolean getBoolean(String fieldName) throws  FileNotFoundException{
         int index = columns.indexOf(fieldName);
         if (index==-1){

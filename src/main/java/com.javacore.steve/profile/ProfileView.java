@@ -2,14 +2,23 @@ package com.javacore.steve.profile;
 
 import com.javacore.steve.common.BaseView;
 import com.javacore.steve.common.Canvas;
+import com.javacore.steve.common.CompositeView;
 import com.javacore.steve.common.ConsoleCanvas;
 
-public class ProfileView extends BaseView {
+public class ProfileView extends CompositeView {
+
+    public void init(){
+        ProfilePhotoView photoView = new ProfilePhotoView(30,2,10);
+        children.add(photoView);
+    }
 
 
     @Override
     public void draw(Canvas canvas) {
-
+        for (BaseView view: children
+             ) {
+            view.draw(canvas);
+        }
         canvas.drawSquare(10);
         canvas.drawText("Criminal Profile view");
         canvas.drawText("Name: " + ((ProfileModel) model).getName());
@@ -22,8 +31,12 @@ public class ProfileView extends BaseView {
     }
     public void drawToConsole(ConsoleCanvas canvas){
         canvas.drawText("Criminal Profile view");
-        canvas.drawCircleAt(67,11,10);
-        canvas.drawSquareAt(58,20,19);
+        canvas.drawRectangleAt(0,0,80,200);
+        canvas.drawRectangleAt(55,1,23,40);
+        canvas.drawCircleAt(66,11,10);
+        canvas.drawPaintedSquareAt(57,20,19);
+        canvas.drawTestAt(3,1, 52, "Name: Jon Snow lord of North and dafksafdklfjadsjfkjsdlfjdskfjkdsfjkjljgae;adsfk;angk;ammre;;kdsagfadfsgdrfag");
+
         canvas.draw();
 
     }

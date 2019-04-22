@@ -9,6 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 public class DataBase {
+
+    public static final String[] CRIMINALS_COLUMNS = new String[]{
+      "id", "firsName"
+    };
+
     Map<String, Table> tables = new HashMap<>();
 
     public DataBase() {

@@ -1,6 +1,7 @@
 package com.javacore.steve.profile;
 
 import com.javacore.steve.common.BaseModel;
+import db.Record;
 
 import java.util.Date;
 
@@ -10,9 +11,9 @@ public class ProfileModel extends BaseModel {
     private String lastName;
     private String nickname;
     private int crimeFamelyId;
-    private String dateOfBirth;
-    private boolean active;
-    private String dateOfDeath;
+    private Date dateOfBirth;
+    private boolean deseased;
+    private Date dateOfDeath;
     private int numberOfCrimes;
 
     public static ProfileModel randomModel() {
@@ -23,11 +24,29 @@ public class ProfileModel extends BaseModel {
         return new ProfileModel(rId, rFirstName, rLastName, rActive);
     }
 
+    public ProfileModel(){}
+
     public ProfileModel(int id, String firstName, String lastName, boolean active) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.active = active;
+        this.deseased = active;
+    }
+
+    public static ProfileModel modelFromRecord(Record record){
+        ProfileModel model = new ProfileModel();
+        try {
+            model.setDeceased(record.getBoolean("deceased")).setId(record.getInt("id"));
+
+        } catch (Record.FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return model;
+    }
+
+    public ProfileModel setDeceased(boolean deseased){
+        this.deseased = deseased;
+        return this;
     }
 
     public int getId() {
@@ -55,11 +74,11 @@ public class ProfileModel extends BaseModel {
     }
 
     public boolean isActive() {
-        return active;
+        return deseased;
     }
 
     public void setActive(boolean active) {
-        this.active = active;
+        this.deseased = active;
     }
 
     public String getName() {

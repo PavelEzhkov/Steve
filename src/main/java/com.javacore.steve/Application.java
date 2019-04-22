@@ -9,10 +9,10 @@ import db.DataBase;
 import db.Record;
 import db.Table;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import javax.swing.text.html.HTMLDocument;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Application is the main entity will be using to start work with Steve
@@ -27,13 +27,51 @@ public class Application {
     public static final String VERSION = "0.0.4";
     private static ApplicationState currentState;
 
+    //delete it
+    public static final String OP_GROUP = "^(SELECT|DELETE)";
+    public static final String FLD_GROUP = "([*a-zA-Z, ]+)";
+    public static final String SPACE = "([\\s]+)";
+    public static final String FROM_GROUP = "(FROM)";
+    public static final String TBL_GROUP = "([a-zA-Z]+)$";
+
+
     public static void main(String[] args) {
+    }
 
-        ProfileController profileController= new ProfileController();
-        profileController.showProfile("Test");
 
-        /*
-        List<String[]> records = DataBase.readDataFile("//criminals.tdl");
+        /**
+         * патерн композит
+         */
+
+      /*
+        String query = "SELECT id, firstName, lastName, FROM Criminals";
+        Pattern p = Pattern.compile(OP_GROUP + SPACE + FLD_GROUP + SPACE + FROM_GROUP + SPACE + TBL_GROUP);
+        Matcher matcher = p.matcher(query);
+        matcher.find();
+        String s = matcher.group(0);
+        System.out.println(s);
+        if (matcher.find()){
+            System.out.println("Number of groups: " + matcher.groupCount());
+            for (int i = 0, len=  matcher.groupCount(); i<=len ; i++) {
+                System.out.println(matcher.group(i));
+            }
+        }
+    }*/
+/*
+    public static void iteratorCleanup(List<String> list, String filter){
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()){
+            String s = it.next();
+            if(!s.matches(filter)){
+                it.remove();
+            }
+        }
+*/
+     //ProfileController profileController= new ProfileController();
+     //profileController.showProfile("Test");
+
+
+        /*List<String[]> records = DataBase.readDataFile("//criminals.tdl");
         Table table = new Table("Criminls", Arrays.asList(new String[]{"id","name","deceased"}));
         for (String[] s: records
              ) {
@@ -45,9 +83,9 @@ public class Application {
 
         System.out.println("All's ok");*/
 
-        /**
-         * example of sinhronized
-         */
+    /**
+     * example of sinhronized
+     */
         /*
         final DataBase dataBase = new DataBase();
         Thread thread = new Thread(){
@@ -74,9 +112,9 @@ public class Application {
 */
 
 
-        /**
-         * test DB
-         */
+    /**
+     * test DB
+     */
 
         /*
         List<String> columns = new ArrayList<>();
@@ -107,22 +145,22 @@ public class Application {
 
 */
 
-        /**
-         * test Canvas
-         */
-        //ConsoleCanvas canvas = new ConsoleCanvas(75,75);
-        //canvas.setSymbolAt(0,2,'A');
-        //canvas.drawSquareAt(2,4,5);
-        //canvas.drawCircleAt(37,37,25);
-        //canvas.drawTestAt(1,6,"asdfdhgfdhfdghsdfgljksrgehklsergnklgsrdhlkasfghlkfasgjh");
-        //canvas.draw();
+    /**
+     * test Canvas
+     */
+    //ConsoleCanvas canvas = new ConsoleCanvas(75,75);
+    //canvas.setSymbolAt(0,2,'A');
+    //canvas.drawSquareAt(2,4,5);
+    //canvas.drawCircleAt(37,37,25);
+    //canvas.drawTestAt(1,6,"asdfdhgfdhfdghsdfgljksrgehklsergnklgsrdhlkasfghlkfasgjh");
+    //canvas.draw();
 
-        // ProfileController profileController = new ProfileController();
-        // profileController.showProfile(6);
+    // ProfileController profileController = new ProfileController();
+    // profileController.showProfile(6);
 
-        /**
-         * test Threads
-         */
+    /**
+     * test Threads
+     */
 
         /*
         Thread thread = new Thread(){
@@ -176,9 +214,9 @@ public class Application {
         thread.start();
 */
 
-        /**
-         * test Commands
-         */
+    /**
+     * test Commands
+     */
 
         /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
@@ -192,8 +230,7 @@ public class Application {
                 break;
             currentState.onCommand(commandName);
         }*/
-    }
-
+   // }
     public static void changeState(ApplicationState newState, String commandName) {
         if (currentState != null) {
             currentState.exit();
