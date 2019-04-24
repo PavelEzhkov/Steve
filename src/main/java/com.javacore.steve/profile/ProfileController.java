@@ -21,13 +21,13 @@ public class ProfileController {
         } else {
             view.setModel(model);
             canvas = new ConsoleCanvas(80,200);
-            view.drawToConsole(canvas);
+            //view.drawToConsole(canvas);
         }
     }
     public void showProfile(String text) {
             canvas = new ConsoleCanvas(80,200);
-            view = new ProfileView();
-            view.drawToConsole(canvas);
+            view = new ProfileView(profileModel);
+            view.draw(canvas);
     }
 
 

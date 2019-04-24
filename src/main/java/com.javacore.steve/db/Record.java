@@ -1,4 +1,4 @@
-package db;
+package com.javacore.steve.db;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,13 +13,15 @@ public class Record {
         values= new ArrayList<>();
     }
 
+    public Record(){}
+
     public Record(Table table){
         columns = table.getColumns();
     }
 
-    public void setValues(String[] values){
+    public void setValues(List<String> values){
         this.values.clear();
-        this.values = Arrays.asList(values);
+        this.values = values;
     }
     /*
     public Record(List<String> values){
@@ -54,6 +56,16 @@ public class Record {
         }
         return Boolean.parseBoolean(values.get(index));
     }
+
+    public int indexOfElement(String value) {
+        return values.indexOf(value);
+    }
+
+    public List<String> getValues() {
+        return values;
+    }
+
+
 
     public class FileNotFoundException extends Exception{
         public FileNotFoundException(String msg){

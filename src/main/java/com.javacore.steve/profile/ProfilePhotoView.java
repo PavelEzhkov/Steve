@@ -7,18 +7,20 @@ public class ProfilePhotoView  extends BaseView {
 
     private int x;
     private int y;
-    private int size;
+    private int sizeX;
 
 
-    public ProfilePhotoView(int x, int y, int size){
+
+    public ProfilePhotoView(int x, int y, int sizeX){
         this.x=x;
         this.y=y;
-        this.size=size;
+        this.sizeX=sizeX;
     }
-
 
     @Override
     public void draw(Canvas canvas) {
-       // super.drawSquare();
+        canvas.drawRectangleAt(x,y,sizeX,sizeX/2*3);
+        canvas.drawCircleAt(x+sizeX/2,y+sizeX/2-1,sizeX/2-2);
+        canvas.drawPaintedRectangleAt(x+2,y+sizeX-3,sizeX-4, sizeX/2+2);// super.drawSquare();
     }
 }

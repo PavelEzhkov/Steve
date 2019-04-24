@@ -17,14 +17,15 @@ public class ConsoleCanvas extends Canvas {
         reset();
     }
 
-    private void reset() {
+    @Override
+    protected void reset() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 pixels[i][j] = ' ';
             }
         }
     }
-
+    @Override
     public void draw() {
         for (int i = 0; i < height; i++) {
             System.out.println();
@@ -34,22 +35,12 @@ public class ConsoleCanvas extends Canvas {
         }
     }
 
-
-    private void setSymbolAt(int x, int y, char symbol) {
+    @Override
+    protected void setSymbolAt(int x, int y, char symbol) {
         pixels[y][x] = symbol;
     }
 
     @Override
-    public void drawText(String text) {
-        System.out.println(text);
-    }
-
-
-    @Override
-    public void drawSquare(int size) {
-
-    }
-
     public void drawSquareAt(int x, int y, int size) {
         //to DO
         for (int i = x; i < x + size; i++) {
@@ -64,6 +55,7 @@ public class ConsoleCanvas extends Canvas {
         }
     }
 
+    @Override
     public void drawPaintedSquareAt(int x, int y, int size) {
         //to DO
         for (int i = x; i < x + size; i++) {
@@ -74,6 +66,7 @@ public class ConsoleCanvas extends Canvas {
 
     }
 
+    @Override
     public void drawPaintedRectangleAt(int x, int y, int sizeX, int sizeY) {
         //to DO
         for (int i = x; i < x + sizeX; i++) {
@@ -83,7 +76,7 @@ public class ConsoleCanvas extends Canvas {
         }
     }
 
-
+    @Override
     public void drawRectangleAt(int x, int y, int sizeX, int sizeY) {
         //to DO
         for (int i = x; i < x + sizeX; i++) {
@@ -98,6 +91,7 @@ public class ConsoleCanvas extends Canvas {
         }
     }
 
+    @Override
     public void drawCircleAt(int x, int y, int radius) {
 
         for (int i = x-radius+1; i <x+radius ; i++) {
@@ -108,7 +102,8 @@ public class ConsoleCanvas extends Canvas {
         }
     }
 
-    public void drawTestAt(int x, int y, int size, String text) {
+    @Override
+    public void drawTextAt(int x, int y, int size, String text) {
         char[] chars = text.toCharArray();
         int lineBreak =0;
         for (int i = 0; i < chars.length; i++) {

@@ -20,7 +20,7 @@ public enum  CommandParser {
 
      public List<String> parsSQLRequest(String request){
 
-        List<String> result = Arrays.asList(request.toLowerCase().split(" = |, |,| "));
+        List<String> result = Arrays.asList(request.split(" = |, |,| "));
 
         return result;
      }
