@@ -135,6 +135,8 @@ public class DataBase {
             bis= new BufferedReader(new InputStreamReader(fis));
             String line;
             while ((line=bis.readLine())!=null){
+
+               //Data handler
                 result.add(Arrays.asList(line.split(";")));
             }
         } catch (IOException fnf) {

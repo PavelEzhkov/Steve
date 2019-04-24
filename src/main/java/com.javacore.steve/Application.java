@@ -29,7 +29,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        initDataBase();
+       // initDataBase();
         //dataBase.selectAndPrint("SELECT id, name FROM CriminalsFamilies");
 
         ProfileModel profileModel = new ProfileModel(1,"TestName","TestLastName", "Nick",1,new GregorianCalendar(1900,11,1),false,
