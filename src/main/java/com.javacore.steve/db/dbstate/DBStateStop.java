@@ -10,6 +10,10 @@ import java.util.List;
 
 public class DBStateStop extends DBState {
 
+    public DBStateStop(String name) {
+        super(name);
+    }
+
     @Override
     public void enter() {
         System.out.println("Entering DBStop state");

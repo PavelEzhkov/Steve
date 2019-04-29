@@ -1,9 +1,7 @@
 package com.javacore.steve;
 
 import com.javacore.steve.common.ConsoleCanvas;
-import com.javacore.steve.db.DataBase;
-import com.javacore.steve.db.Record;
-import com.javacore.steve.db.Table;
+import com.javacore.steve.db.DBApplication;
 import com.javacore.steve.db.misc.MainDataEncryptor;
 import com.javacore.steve.profile.ProfileModel;
 import com.javacore.steve.profile.ProfileView;
@@ -25,14 +23,14 @@ public class Application {
 
     private static ApplicationState currentState;
 
-    private static DataBase dataBase;
+    //private static DataBase dataBase;
 
 
     public static void main(String[] args) {
-
-        MainDataEncryptor encryptor = new MainDataEncryptor();
-        String test = encryptor.encrypt("A10");
-        System.out.println(test);
+        DBApplication.INSTANCE.start();
+       // MainDataEncryptor encryptor = new MainDataEncryptor();
+       // String test = encryptor.encrypt("A10");
+       // System.out.println(test);
        // initDataBase();
         //dataBase.selectAndPrint("SELECT id, name FROM CriminalsFamilies");
 /*
@@ -65,12 +63,12 @@ public class Application {
         currentState = newState;
         currentState.enter(commandName);
     }
-
+/*
     private static void initDataBase(){
         Table criminals = DataBase.readTable("Criminals","tables/Criminals.tbl");
         Table crimeFamilies = DataBase.readTable("CriminalsFamilies","tables/CrimeFamily.tbl");
         dataBase = new DataBase();
         dataBase.setTables(criminals.getName(), criminals);
         dataBase.setTables(crimeFamilies.getName(), crimeFamilies);
-    }
+    }*/
 }

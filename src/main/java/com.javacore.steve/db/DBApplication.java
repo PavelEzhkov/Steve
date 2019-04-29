@@ -16,9 +16,9 @@ public enum DBApplication {
 
     public static final String DATA_ENCRYPTION_LEVEL = "LOW";
     private DBState currentState;
-    public DBState stateInit = new DBStateInit();
-    public DBState stateRun = new DBStateRunning();
-    public DBState stateStop = new DBStateStop();
+    public DBState stateInit = new DBStateInit("Init");
+    public DBState stateRun = new DBStateRunning("Running");
+    public DBState stateStop = new DBStateStop("Stop");
 
     public void start() {
         changeState(stateInit);
@@ -44,7 +44,11 @@ public enum DBApplication {
         currentState.enter();
     }
 
-    //переписать на примере лекции
+    public String getStateName(){
+        return currentState.getName();
+    }
+/*
+    //переписать на примере лекции/*
     public List<Record> select(String query) {
         final List<String> request = new ArrayList<>(CommandParser.INSTANCE.parsSQLRequest(query));
         String whereColumn= null;
@@ -67,7 +71,7 @@ public enum DBApplication {
 
             Table table = tables.get(tableName);
             result = table.select(request, table, finalWhereColumn, finalWhereValue);
-/*
+
             Thread thread = new Thread() {
                 @Override
                 public void run() {
@@ -90,9 +94,9 @@ public enum DBApplication {
                 }
             };
             System.out.print("\nLoading from database: " + tableName);
-            thread.start();*/
+            thread.start();
         } else System.out.println("Query isn't correct, need From argument");
         return result;
     }
-
+*/
 }

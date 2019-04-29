@@ -1,6 +1,11 @@
 package com.javacore.steve.db.dbstate;
 
 public abstract class DBState {
+    protected String name;
+
+    public DBState(String name) {
+        this.name = name;
+    }
 
     public void enter() {
         System.out.println("Basic entering state");
@@ -18,4 +23,11 @@ public abstract class DBState {
         System.out.println("Basic stop handling");
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

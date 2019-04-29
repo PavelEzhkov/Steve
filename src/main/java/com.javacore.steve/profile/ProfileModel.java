@@ -1,7 +1,7 @@
 package com.javacore.steve.profile;
 
 import com.javacore.steve.common.BaseModel;
-import com.javacore.steve.db.Record;
+
 
 import java.text.DateFormat;
 import java.text.Format;
@@ -42,7 +42,7 @@ public class ProfileModel extends BaseModel {
         this.lastName = lastName;
         this.deceased = active;
     }
-
+/*
     public static ProfileModel modelFromRecord(Record record){
         ProfileModel model = new ProfileModel();
         try {
@@ -54,7 +54,7 @@ public class ProfileModel extends BaseModel {
             e.printStackTrace();
         }
         return model;
-    }
+    }*/
 
     public ProfileModel setDeceased(boolean deseased){
         this.deceased = deseased;

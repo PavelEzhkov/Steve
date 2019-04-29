@@ -1,7 +1,7 @@
 package com.javacore.steve.db.data;
 
 
-import com.javacore.steve.db.Record;
+
 import com.javacore.steve.db.misc.DataHandler;
 import com.javacore.steve.db.misc.Utils;
 
@@ -65,7 +65,7 @@ public class Table {
         } else System.out.println("Query isn't correct, need Select argument");
 
     }*/
-
+/*
     ////
     public List<Record> select(List<String> request, com.javacore.steve.db.Table table, String whereColumn, String whereValue) {
         List<Record> result = new ArrayList<>();
@@ -96,7 +96,7 @@ public class Table {
         }
         return result;
     }
-
+*/
     ///
 
     public void addRow(TableRow row) {

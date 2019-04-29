@@ -1,8 +1,7 @@
 package com.javacore.steve.commands;
 
 import com.javacore.steve.common.ConsoleCanvas;
-import com.javacore.steve.db.DataBase;
-import com.javacore.steve.db.Record;
+
 import com.javacore.steve.profile.ProfileModel;
 import com.javacore.steve.profile.ProfileView;
 
@@ -24,7 +23,7 @@ public class CommandShow extends ACommand {
 
     @Override
     public void execute() {
-        Record record = new Record();
+       // Record record = new Record();
 
         ProfileModel profileModel = new ProfileModel(1,"TestName","TestLastName", "Nick",1,new GregorianCalendar(1900,11,1),false,
                 new GregorianCalendar(1925,6,11),10);

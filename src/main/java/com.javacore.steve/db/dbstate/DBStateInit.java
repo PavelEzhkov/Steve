@@ -7,13 +7,24 @@ import com.javacore.steve.db.data.TableMetaData;
 import com.javacore.steve.db.misc.DBConstants;
 import com.javacore.steve.db.misc.DataHandler;
 import com.javacore.steve.db.misc.Utils;
+import com.javacore.steve.db.server.DBServer;
 
 public class DBStateInit extends DBState {
+    public DBStateInit(String name) {
+        super(name);
+    }
+
     @Override
     public void enter() {
         System.out.println("Entering DBInit state");
         initTables();
-        DBApplication.INSTANCE.changeState(DBApplication.INSTANCE.stateRun);
+        try {
+            DBServer.INSTANCE.start();
+            DBApplication.INSTANCE.changeState(DBApplication.INSTANCE.stateRun);
+        } catch (Exception e) {
+            e.printStackTrace();
+            DBApplication.INSTANCE.changeState(DBApplication.INSTANCE.stateStop);
+        }
     }
 
     private void initTables() {
