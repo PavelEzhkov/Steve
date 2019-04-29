@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2e53202-0fe9-486e-9f93-03b1f8360c95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/data/CrimeFamily.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/data/Criminals.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/data/test.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/structure/tables/CrimeFamily.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/structure/tables/Criminals.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/structure/test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/DBApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/QueryResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableColumn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableMetaData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableRow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateRunning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateStop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DBConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DataEncryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/MainDataEncryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/XMLDocumentHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/DataBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/Record.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/Table.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/ACommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/ACommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandAuthor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandAuthor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandHelp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandHelp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandVersion.class" afterDir="false" />
-    </list>
+    <list default="true" id="b2e53202-0fe9-486e-9f93-03b1f8360c95" name="Default Changelist" comment="version 0.0.5" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,27 +16,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateInit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateRunning.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -80,13 +24,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DataEncryptor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Lessons.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandShow.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -251,7 +209,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="11" />
     <option name="y" value="506" />
     <option name="width" value="1932" />
@@ -502,14 +460,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556113864042</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="version 0.0.5">
+      <created>1556545879421</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556545879421</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2867804" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2867804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -518,14 +483,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908913" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74520254" visible="true" weight="0.48481882" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.74520254" weight="0.48481882" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39960822" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" show_stripe_button="false" sideWeight="0.25479743" side_tool="true" weight="0.32810968" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32908913" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32908913" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32908913" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -605,13 +570,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Downloads/api-core-1.2.jar!/org/openweathermap/api/DataWeatherClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/api-query-1.2.jar!/org/openweathermap/api/query/forecast/daily/DailyForecastQuery.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -725,13 +683,6 @@
             <element signature="e#352#353#0" expanded="true" />
             <element signature="e#386#387#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Lessons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -1033,6 +984,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandShow.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Lessons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
