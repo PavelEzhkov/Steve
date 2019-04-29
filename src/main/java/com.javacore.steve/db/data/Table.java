@@ -1,31 +1,40 @@
-package com.javacore.steve.db;
+package com.javacore.steve.db.data;
+
+
+import com.javacore.steve.db.Record;
+import com.javacore.steve.db.misc.DataHandler;
+import com.javacore.steve.db.misc.Utils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 public class Table {
 
-    private String name;
+    private List<TableRow> rows;
+    private TableMetaData metaData;
 
-    private List<String> columns;
-
-    private List<Record> records;
-
-    {
-        records = new ArrayList<>();
+    public Table(TableMetaData metaData) {
+        this.metaData = metaData;
+        rows = new ArrayList<>();
     }
 
-    public Table(String name, List<String> columns) {
-        this.name = name;
-        this.columns = columns;
+    public void load() {
+        Utils.readFileLineByLine(metaData.getPathToData(), new DataHandler() {
+            @Override
+            public void handleString(String line) {
+                TableRow row = new TableRow();
+                row.setValues(line);
+                addRow(row);
+            }
+        });
+        System.out.println(this);
     }
 
-    public void insert(Record record) {
-        records.add(record);
-    }
+    public void save() {
 
+    }
+    /*
     void selectAndPrint(List<String> request, String whereColumn, String whereValue) {
         List<List<String>> result = new ArrayList<>();
         if (request.contains("SELECT")) {
@@ -55,9 +64,10 @@ public class Table {
 
         } else System.out.println("Query isn't correct, need Select argument");
 
-    }
+    }*/
 
-    public List<Record> select(List<String> request,Table table, String whereColumn, String whereValue) {
+    ////
+    public List<Record> select(List<String> request, com.javacore.steve.db.Table table, String whereColumn, String whereValue) {
         List<Record> result = new ArrayList<>();
         if (request.contains("SELECT")) {
             for (int i = 1; i < request.size(); i++) {
@@ -87,12 +97,19 @@ public class Table {
         return result;
     }
 
-    public String getName() {
-        return name;
+    ///
+
+    public void addRow(TableRow row) {
+        rows.add(row);
     }
 
-
-    public List<String> getColumns(){
-        return columns;
+    @Override
+    public String toString() {
+        String result = "\n" + metaData.getTableName();
+        result += "\nStructure file: " + metaData.getPathToStructure();
+        result += "\nData file: " + metaData.getPathToStructure();
+        result += "\n" + metaData.getColumns();
+        result += "\nnumber of rows: " + rows.size();
+        return result;
     }
 }

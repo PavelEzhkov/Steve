@@ -4,6 +4,7 @@ import com.javacore.steve.common.ConsoleCanvas;
 import com.javacore.steve.db.DataBase;
 import com.javacore.steve.db.Record;
 import com.javacore.steve.db.Table;
+import com.javacore.steve.db.misc.MainDataEncryptor;
 import com.javacore.steve.profile.ProfileModel;
 import com.javacore.steve.profile.ProfileView;
 import com.javacore.steve.state.ApplicationState;
@@ -29,16 +30,19 @@ public class Application {
 
     public static void main(String[] args) {
 
-        initDataBase();
+        MainDataEncryptor encryptor = new MainDataEncryptor();
+        String test = encryptor.encrypt("A10");
+        System.out.println(test);
+       // initDataBase();
         //dataBase.selectAndPrint("SELECT id, name FROM CriminalsFamilies");
-
+/*
         ProfileModel profileModel = new ProfileModel(1,"TestName","TestLastName", "Nick",1,new GregorianCalendar(1900,11,1),false,
                 new GregorianCalendar(1925,6,11),10);
         ProfileView profileView = new ProfileView(profileModel);
         profileView.init();
         profileView.draw(new ConsoleCanvas(80,200));
 
-
+*/
         /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
         String commandName;
