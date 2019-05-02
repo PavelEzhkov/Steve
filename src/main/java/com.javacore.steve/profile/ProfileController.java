@@ -8,11 +8,6 @@ public class ProfileController {
     private ProfileStore store;
     private ConsoleCanvas canvas;
 
-   /* {
-        store.INSTANSE.loadDate();
-        view = new ProfileView();
-        canvas = new ConsoleCanvas(15,15);
-    }*/
 
     public void showProfile(int id) {
         ProfileModel model = store.INSTANSE.getProfile(id);

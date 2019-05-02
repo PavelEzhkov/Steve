@@ -5,6 +5,10 @@ package com.javacore.steve.db.data;
 import com.javacore.steve.db.misc.DBConstants;
 import com.javacore.steve.db.misc.DataHandler;
 import com.javacore.steve.db.misc.Utils;
+import com.javacore.steve.db.misc.XMLDocumentHandler;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +31,20 @@ public class TableMetaData {
 
     public static TableMetaData loadFromFile(String fileName) {
         TableMetaData metaData = new TableMetaData();
+        try {
+            Utils.readXMLDocument(fileName, document -> {
+                Element root = document.getDocumentElement();
+                metaData.setTableName(root.getAttribute("name"));
+                NodeList columns = root.getElementsByTagName("column");
+                for (int i = 0; i < columns.getLength(); i++) {
+                    Element column = (Element) columns.item(i);
+                    metaData.addColumn(new TableColumn(column.getAttribute("systemName"), column.getAttribute("displayName")));
+                }
+            });
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+/*
         Utils.readFileLineByLine(fileName, new DataHandler() {
             @Override
             public void handleString(String line) {
@@ -39,10 +57,10 @@ public class TableMetaData {
                     metaData.addColumns(parts[1]);
                 }
             }
-        });
+        });*/
         metaData.setPathToStructure(fileName);
         metaData.setPathToData(
-            DBConstants.DATA_DIR + "/" +
+            DBConstants.DATA_DIR + "\\" +
             metaData.getTableName() +
             DBConstants.DATA_EXT)
         ;

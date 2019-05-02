@@ -2,19 +2,30 @@ package com.javacore.steve.db;
 
 
 import com.javacore.steve.db.data.QueryResult;
+import com.javacore.steve.db.data.Table;
+import com.javacore.steve.db.data.TableMetaData;
+import com.javacore.steve.db.data.TableRow;
 import com.javacore.steve.db.dbstate.DBState;
 import com.javacore.steve.db.dbstate.DBStateInit;
 import com.javacore.steve.db.dbstate.DBStateRunning;
 import com.javacore.steve.db.dbstate.DBStateStop;
+import com.javacore.steve.db.server.DBServer;
 import com.javacore.steve.helpers.CommandParser;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public enum DBApplication {
     INSTANCE;
 
+    List<Table> tables;
+
     public static final String DATA_ENCRYPTION_LEVEL = "LOW";
+    public static final int TABLE_NAME = 3;
+    public static final int COLUMNS_NAMES = 1;
+    public static final int WHERE = 5;
+    public static final int WHERE_VALUE = 1;
+    public static final int WHERE_NAME = 0;
     private DBState currentState;
     public DBState stateInit = new DBStateInit("Init");
     public DBState stateRun = new DBStateRunning("Running");
@@ -22,6 +33,7 @@ public enum DBApplication {
 
     public void start() {
         changeState(stateInit);
+        tables = DBServer.INSTANCE.getTables();
     }
 
     public void stop() {
@@ -44,59 +56,52 @@ public enum DBApplication {
         currentState.enter();
     }
 
-    public String getStateName(){
+    public String getStateName() {
         return currentState.getName();
     }
-/*
-    //переписать на примере лекции/*
-    public List<Record> select(String query) {
-        final List<String> request = new ArrayList<>(CommandParser.INSTANCE.parsSQLRequest(query));
-        String whereColumn= null;
-        String whereValue = null;
-        List<Record> result = new ArrayList<>();
-        if (request.contains("WHERE"))
-        {
-            whereColumn = request.get(request.indexOf("WHERE") + 1);
-            whereValue = request.get(request.indexOf("WHERE") + 2);
-            request.remove(request.indexOf("WHERE") + 1);
-            request.remove(request.indexOf("WHERE") + 1);
-            request.remove("WHERE");
-        }
-        if (request.contains("FROM")) {
-            final String tableName = request.get(request.indexOf("FROM") + 1);
-            request.remove("FROM");
-            request.remove(tableName);
-            final String finalWhereColumn = whereColumn;
-            final String finalWhereValue = whereValue;
 
-            Table table = tables.get(tableName);
-            result = table.select(request, table, finalWhereColumn, finalWhereValue);
-
-            Thread thread = new Thread() {
-                @Override
-                public void run() {
-                    for (int i = 0; i < 10; i++) {
-                        System.out.print(".");
-                        try {
-                            Thread.sleep(50);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+    public String selectXML(String query) {
+        StringBuilder result = new StringBuilder();
+        result.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+        List<String> queryList = CommandParser.pars(query);
+        for (Table t : tables
+        ) {
+            if (t.getMetaData().getTableName().equals(queryList.get(TABLE_NAME))) {
+                result.append("<table name=\"").append(queryList.get(TABLE_NAME)).append("\">").append("<rows>");
+                List<String> columns = Arrays.asList(queryList.get(COLUMNS_NAMES).split(", |,"));
+                List<TableRow> values = t.select(columns);
+                TableMetaData tableMetaData = t.selectMetaData(columns);
+                int start =0;
+                int size = values.size();
+                if (queryList.contains("WHERE")){
+                    List<String> whereList = Arrays.asList(queryList.get(WHERE).split(" = "));
+                    int columnNumber=-1;
+                    for (int i = 0; i < tableMetaData.getColumns().size(); i++) {
+                       if(tableMetaData.getColumns().get(i).getName().equals(whereList.get(WHERE_NAME))){
+                           columnNumber=i;
+                       }
+                    }
+                    for (int i = 0; i < values.size(); i++) {
+                        if (values.get(i).getValues().get(columnNumber).equals(whereList.get(WHERE_VALUE))){
+                            start=i;
+                            size =i+1;
                         }
                     }
-                    System.out.println("done");
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    Table table = tables.get(tableName);
-                    result = table.select(request, table, finalWhereColumn, finalWhereValue);
+
                 }
-            };
-            System.out.print("\nLoading from database: " + tableName);
-            thread.start();
-        } else System.out.println("Query isn't correct, need From argument");
-        return result;
+                for (int i = start; i < size; i++) {
+                    result.append("<row>");
+                    for (int j = 0; j < tableMetaData.getColumns().size(); j++) {
+                        result.append("<column systemName=\"").append(tableMetaData.getColumns().get(j).getName())
+                                .append("\" displayName=\"").append(tableMetaData.getColumns().get(j).getDisplayName())
+                                .append("\" value=\"").append(values.get(i).getValues().get(j)).append("\"/>");
+                    }
+                    result.append("</row>");
+                }
+            }
+        }
+        result.append("</rows>").append("</table>");
+        return result.toString();
     }
-*/
+
 }

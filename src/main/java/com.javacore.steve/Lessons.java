@@ -1,5 +1,8 @@
 package com.javacore.steve;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Lessons {
     public static final String OP_GROUP = "^(SELECT|DELETE)";
     public static final String FLD_GROUP = "([*a-zA-Z, ]+)";
@@ -16,20 +19,20 @@ public class Lessons {
          * патерн композит
          */
 
-      /*
-        String query = "SELECT id, firstName, lastName, FROM criminals";
+
+        String query = "SELECT id, firstName, lastName, FROM Criminals";
         Pattern p = Pattern.compile(OP_GROUP + SPACE + FLD_GROUP + SPACE + FROM_GROUP + SPACE + TBL_GROUP);
         Matcher matcher = p.matcher(query);
-        matcher.find();
-        String s = matcher.group(0);
-        System.out.println(s);
         if (matcher.find()){
             System.out.println("Number of groups: " + matcher.groupCount());
-            for (int i = 0, len=  matcher.groupCount(); i<=len ; i++) {
-                System.out.println(matcher.group(i));
+            for (int i = 1, len=  matcher.groupCount(); i<=len ; i++) {
+                String s = matcher.group(i).trim();
+                if (!s.equals(""))
+                   // result.add(s);
+                 System.out.println(s);
             }
         }
-    }*/
+    }
 /*
     public static void iteratorCleanup(List<String> list, String filter){
         Iterator<String> it = list.iterator();
@@ -187,4 +190,4 @@ public class Lessons {
         thread.start();
 */
     }
-}
+

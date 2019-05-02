@@ -3,6 +3,7 @@ package com.javacore.steve;
 import com.javacore.steve.common.ConsoleCanvas;
 import com.javacore.steve.db.DBApplication;
 import com.javacore.steve.db.misc.MainDataEncryptor;
+import com.javacore.steve.db.server.DBServer;
 import com.javacore.steve.profile.ProfileModel;
 import com.javacore.steve.profile.ProfileView;
 import com.javacore.steve.state.ApplicationState;
@@ -19,15 +20,25 @@ import java.util.*;
 public class Application {
     public static final String APP_NAME = "Steve";
     public static final String AUTHOR = "Pavel Ezhkov";
-    public static final String VERSION = "0.0.5";
+    public static final String VERSION = "0.0.6";
 
     private static ApplicationState currentState;
 
     //private static DataBase dataBase;
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         DBApplication.INSTANCE.start();
+
+        String query = "SELECT * FROM Criminals WHERE id = 3";
+
+        String xml = DBApplication.INSTANCE.selectXML(query);
+        System.out.println(xml);
+
+        DBServer.INSTANCE.showSelect(xml);
+
+
+
        // MainDataEncryptor encryptor = new MainDataEncryptor();
        // String test = encryptor.encrypt("A10");
        // System.out.println(test);
@@ -39,8 +50,8 @@ public class Application {
         ProfileView profileView = new ProfileView(profileModel);
         profileView.init();
         profileView.draw(new ConsoleCanvas(80,200));
+/*
 
-*/
         /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
         String commandName;

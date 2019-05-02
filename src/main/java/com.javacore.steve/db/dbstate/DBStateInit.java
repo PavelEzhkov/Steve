@@ -9,7 +9,13 @@ import com.javacore.steve.db.misc.DataHandler;
 import com.javacore.steve.db.misc.Utils;
 import com.javacore.steve.db.server.DBServer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DBStateInit extends DBState {
+
+    private List<Table> tables = new ArrayList<>();
+
     public DBStateInit(String name) {
         super(name);
     }
@@ -19,7 +25,7 @@ public class DBStateInit extends DBState {
         System.out.println("Entering DBInit state");
         initTables();
         try {
-            DBServer.INSTANCE.start();
+            DBServer.INSTANCE.start(tables);
             DBApplication.INSTANCE.changeState(DBApplication.INSTANCE.stateRun);
         } catch (Exception e) {
             e.printStackTrace();
@@ -34,6 +40,7 @@ public class DBStateInit extends DBState {
                 TableMetaData metaData = TableMetaData.loadFromFile(filePath);
                 Table table = new Table(metaData);
                 table.load();
+                tables.add(table);
             }
         });
     }
