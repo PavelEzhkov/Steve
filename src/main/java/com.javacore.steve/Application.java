@@ -28,6 +28,7 @@ public class Application {
 
 
     public static void main(String[] args) throws Exception {
+
         DBApplication.INSTANCE.start();
 
         String query = "SELECT * FROM Criminals WHERE id = 3";
@@ -44,13 +45,13 @@ public class Application {
        // System.out.println(test);
        // initDataBase();
         //dataBase.selectAndPrint("SELECT id, name FROM CriminalsFamilies");
-/*
-        ProfileModel profileModel = new ProfileModel(1,"TestName","TestLastName", "Nick",1,new GregorianCalendar(1900,11,1),false,
+
+       /* ProfileModel profileModel = new ProfileModel(1,"TestName","TestLastName", "Nick",1,new GregorianCalendar(1900,11,1),true,
                 new GregorianCalendar(1925,6,11),10);
         ProfileView profileView = new ProfileView(profileModel);
         profileView.init();
         profileView.draw(new ConsoleCanvas(80,200));
-/*
+*/
 
         /*changeState(new StateIdle(), "idle");
         Scanner scanner = new Scanner(System.in);
