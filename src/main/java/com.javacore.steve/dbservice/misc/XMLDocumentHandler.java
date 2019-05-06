@@ -1,4 +1,4 @@
-package com.javacore.steve.db.misc;
+package com.javacore.steve.dbservice.misc;
 
 import org.w3c.dom.Document;
 

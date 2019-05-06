@@ -1,9 +1,9 @@
-package com.javacore.steve.db.dbstate;
+package com.javacore.steve.dbservice.dbstate;
 
 
-import com.javacore.steve.db.misc.DBConstants;
-import com.javacore.steve.db.misc.MainDataEncryptor;
-import com.javacore.steve.db.misc.Utils;
+import com.javacore.steve.dbservice.misc.DBConstants;
+import com.javacore.steve.dbservice.misc.MainDataEncryptor;
+import com.javacore.steve.dbservice.misc.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

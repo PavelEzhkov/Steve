@@ -1,7 +1,7 @@
-package com.javacore.steve.db.misc;
+package com.javacore.steve.dbservice.misc;
 
 
-import com.javacore.steve.db.DBApplication;
+import com.javacore.steve.dbservice.DBApplication;
 
 import java.math.BigInteger;
 

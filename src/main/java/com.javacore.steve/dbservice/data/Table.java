@@ -1,8 +1,8 @@
-package com.javacore.steve.db.data;
+package com.javacore.steve.dbservice.data;
 
 
-import com.javacore.steve.db.misc.DataHandler;
-import com.javacore.steve.db.misc.Utils;
+import com.javacore.steve.dbservice.misc.DataHandler;
+import com.javacore.steve.dbservice.misc.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

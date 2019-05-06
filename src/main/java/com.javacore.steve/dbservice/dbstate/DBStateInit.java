@@ -1,13 +1,13 @@
-package com.javacore.steve.db.dbstate;
+package com.javacore.steve.dbservice.dbstate;
 
 
-import com.javacore.steve.db.DBApplication;
-import com.javacore.steve.db.data.Table;
-import com.javacore.steve.db.data.TableMetaData;
-import com.javacore.steve.db.misc.DBConstants;
-import com.javacore.steve.db.misc.DataHandler;
-import com.javacore.steve.db.misc.Utils;
-import com.javacore.steve.db.server.DBServer;
+import com.javacore.steve.dbservice.DBApplication;
+import com.javacore.steve.dbservice.data.Table;
+import com.javacore.steve.dbservice.data.TableMetaData;
+import com.javacore.steve.dbservice.misc.DBConstants;
+import com.javacore.steve.dbservice.misc.DataHandler;
+import com.javacore.steve.dbservice.misc.Utils;
+import com.javacore.steve.dbservice.server.DBServer;
 
 import java.util.ArrayList;
 import java.util.List;

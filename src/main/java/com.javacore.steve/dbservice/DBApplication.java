@@ -1,15 +1,15 @@
-package com.javacore.steve.db;
+package com.javacore.steve.dbservice;
 
 
-import com.javacore.steve.db.data.QueryResult;
-import com.javacore.steve.db.data.Table;
-import com.javacore.steve.db.data.TableMetaData;
-import com.javacore.steve.db.data.TableRow;
-import com.javacore.steve.db.dbstate.DBState;
-import com.javacore.steve.db.dbstate.DBStateInit;
-import com.javacore.steve.db.dbstate.DBStateRunning;
-import com.javacore.steve.db.dbstate.DBStateStop;
-import com.javacore.steve.db.server.DBServer;
+import com.javacore.steve.dbservice.data.QueryResult;
+import com.javacore.steve.dbservice.data.Table;
+import com.javacore.steve.dbservice.data.TableMetaData;
+import com.javacore.steve.dbservice.data.TableRow;
+import com.javacore.steve.dbservice.dbstate.DBState;
+import com.javacore.steve.dbservice.dbstate.DBStateInit;
+import com.javacore.steve.dbservice.dbstate.DBStateRunning;
+import com.javacore.steve.dbservice.dbstate.DBStateStop;
+import com.javacore.steve.dbservice.server.DBServer;
 import com.javacore.steve.helpers.CommandParser;
 
 import java.util.Arrays;
@@ -71,23 +71,22 @@ public enum DBApplication {
                 List<String> columns = Arrays.asList(queryList.get(COLUMNS_NAMES).split(", |,"));
                 List<TableRow> values = t.select(columns);
                 TableMetaData tableMetaData = t.selectMetaData(columns);
-                int start =0;
+                int start = 0;
                 int size = values.size();
-                if (queryList.contains("WHERE")){
+                if (queryList.contains("WHERE")) {
                     List<String> whereList = Arrays.asList(queryList.get(WHERE).split(" = "));
-                    int columnNumber=-1;
+                    int columnNumber = -1;
                     for (int i = 0; i < tableMetaData.getColumns().size(); i++) {
-                       if(tableMetaData.getColumns().get(i).getName().equals(whereList.get(WHERE_NAME))){
-                           columnNumber=i;
-                       }
-                    }
-                    for (int i = 0; i < values.size(); i++) {
-                        if (values.get(i).getValues().get(columnNumber).equals(whereList.get(WHERE_VALUE))){
-                            start=i;
-                            size =i+1;
+                        if (tableMetaData.getColumns().get(i).getName().equals(whereList.get(WHERE_NAME))) {
+                            columnNumber = i;
                         }
                     }
-
+                    for (int i = 0; i < values.size(); i++) {
+                        if (values.get(i).getValues().get(columnNumber).equals(whereList.get(WHERE_VALUE))) {
+                            start = i;
+                            size = i + 1;
+                        }
+                    }
                 }
                 for (int i = start; i < size; i++) {
                     result.append("<row>");

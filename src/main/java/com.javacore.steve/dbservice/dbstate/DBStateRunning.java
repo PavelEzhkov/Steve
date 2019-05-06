@@ -1,7 +1,7 @@
-package com.javacore.steve.db.dbstate;
+package com.javacore.steve.dbservice.dbstate;
 
 
-import com.javacore.steve.db.DBApplication;
+import com.javacore.steve.dbservice.DBApplication;
 
 public class DBStateRunning extends DBState {
 

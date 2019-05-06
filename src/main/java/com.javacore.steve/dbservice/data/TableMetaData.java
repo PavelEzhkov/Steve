@@ -1,12 +1,9 @@
-package com.javacore.steve.db.data;
+package com.javacore.steve.dbservice.data;
 
 
 
-import com.javacore.steve.db.misc.DBConstants;
-import com.javacore.steve.db.misc.DataHandler;
-import com.javacore.steve.db.misc.Utils;
-import com.javacore.steve.db.misc.XMLDocumentHandler;
-import org.w3c.dom.Document;
+import com.javacore.steve.dbservice.misc.DBConstants;
+import com.javacore.steve.dbservice.misc.Utils;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 

@@ -1,4 +1,4 @@
-package com.javacore.steve.db.misc;
+package com.javacore.steve.dbservice.misc;
 
 public interface DBConstants {
     String DB_DIR = "database";

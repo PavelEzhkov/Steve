@@ -1,4 +1,4 @@
-package com.javacore.steve.db.data;
+package com.javacore.steve.dbservice.data;
 
 public class TableColumn {
     private String name;

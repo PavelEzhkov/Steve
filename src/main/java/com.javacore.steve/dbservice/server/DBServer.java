@@ -1,7 +1,7 @@
-package com.javacore.steve.db.server;
+package com.javacore.steve.dbservice.server;
 
 
-import com.javacore.steve.db.data.Table;
+import com.javacore.steve.dbservice.data.Table;
 import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;
@@ -17,7 +17,7 @@ public enum DBServer {
 
     public void showSelect(String select) throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8081), 10);
-        server.createContext("/db/select", new XMLHandlerShow(select));
+        server.createContext("/dbservice/select", new XMLHandlerShow(select));
         server.start();
     }
 
@@ -28,8 +28,8 @@ public enum DBServer {
         for (Table table : tables) {
             listOfTables.add(table.getMetaData().getPathToStructure());
         }
-        server.createContext("/db/structure", new XMLHandler(listOfTables));
-        server.createContext("/db/state", new StateHandler());
+        server.createContext("/dbservice/structure", new XMLHandler(listOfTables));
+        server.createContext("/dbservice/state", new StateHandler());
         server.start();
         String massage = String.format("Server is running on port: %d", server.getAddress().getPort());
         System.out.println(massage);

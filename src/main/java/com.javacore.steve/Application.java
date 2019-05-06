@@ -1,14 +1,9 @@
 package com.javacore.steve;
 
-import com.javacore.steve.common.ConsoleCanvas;
-import com.javacore.steve.db.DBApplication;
-import com.javacore.steve.db.misc.MainDataEncryptor;
-import com.javacore.steve.db.server.DBServer;
-import com.javacore.steve.profile.ProfileModel;
-import com.javacore.steve.profile.ProfileView;
+import com.javacore.steve.dbservice.DBApplication;
+import com.javacore.steve.dbservice.server.DBServer;
 import com.javacore.steve.state.ApplicationState;
-
-import java.util.*;
+import com.javacore.steve.webservice.WebClientApplication;
 
 /**
  * Application is the main entity will be using to start work with Steve
@@ -29,6 +24,8 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
 
+        WebClientApplication.INSTANCE.start();
+        /*
         DBApplication.INSTANCE.start();
 
         String query = "SELECT * FROM Criminals WHERE id = 3";
@@ -37,7 +34,7 @@ public class Application {
         System.out.println(xml);
 
         DBServer.INSTANCE.showSelect(xml);
-
+*/
 
 
        // MainDataEncryptor encryptor = new MainDataEncryptor();
@@ -84,3 +81,4 @@ public class Application {
         dataBase.setTables(crimeFamilies.getName(), crimeFamilies);
     }*/
 }
+// три части client, appserver, DB. в первой принять запрос и отправить на 2. бд просто хранит данные.

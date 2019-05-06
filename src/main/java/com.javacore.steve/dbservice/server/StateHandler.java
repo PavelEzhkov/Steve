@@ -1,6 +1,6 @@
-package com.javacore.steve.db.server;
+package com.javacore.steve.dbservice.server;
 
-import com.javacore.steve.db.DBApplication;
+import com.javacore.steve.dbservice.DBApplication;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 

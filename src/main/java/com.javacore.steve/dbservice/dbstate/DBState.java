@@ -1,4 +1,4 @@
-package com.javacore.steve.db.dbstate;
+package com.javacore.steve.dbservice.dbstate;
 
 public abstract class DBState {
     protected String name;
