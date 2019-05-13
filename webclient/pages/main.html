@@ -1,9 +1,15 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script type="application/javascript" src="/static/js/main.js"></script>
 </head>
 <body>
     <div>Criminal Profile for {{criminalName}}</div>
     <div>Number of Crimes {{numberOfCrimes}}</div>
+    <div>Current time is {{time}}</div>
+    <input id = "test_input" type="text"/>
+    <input type="button" onclick="onTestGeyButtonClick();" value="Test get Button">
+
+    <div id="server_response_section"></div>
 </body>
 </html>

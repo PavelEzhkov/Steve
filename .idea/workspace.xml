@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2e53202-0fe9-486e-9f93-03b1f8360c95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/HtmlHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/pages/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/static/css/main.css" afterDir="false" />
+    <list default="true" id="b2e53202-0fe9-486e-9f93-03b1f8360c95" name="Default Changelist" comment="version 0.0.6">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/CriminalsApiHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/ServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiCriminalsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiGETTestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiPostHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/JsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/pages/criminals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/static/css/criminals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/static/js/criminals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/structure/tables/Criminals.xml" beforeDir="false" afterPath="$PROJECT_DIR$/database/structure/tables/Criminals.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/DBApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/DBApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/QueryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/data/QueryResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/data/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/data/TableColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/data/TableMetaData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/data/TableRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/data/TableRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/dbstate/DBState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/dbstate/DBStateInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateRunning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/dbstate/DBStateRunning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/dbstate/DBStateStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/dbstate/DBStateStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DBConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/DBConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DataEncryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/DataEncryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/DataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/MainDataEncryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/MainDataEncryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/misc/XMLDocumentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/misc/XMLDocumentHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/DBServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/DBServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/StateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/StateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/XMLHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/XMLHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/XMLHandlerShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/XMLHandlerShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/Lessons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/Lessons.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/commands/CommandVersion.class" afterDir="false" />
@@ -56,6 +42,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/db/misc/XMLDocumentHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/helpers/CommandParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/helpers/CommandParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/javacore/steve/profile/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javacore/steve/profile/ProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/pages/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/static/css/main.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,23 +59,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/DBServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="79" lean-forward="true" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/XMLHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="308">
+              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="340">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,10 +83,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/HtmlHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiCriminalsHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="442">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/CriminalsApiHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiPostHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/ServerApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,29 +133,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webclient/pages/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Template.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="51">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java">
+        <entry file="file://$PROJECT_DIR$/webclient/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webclient/pages/criminals.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webclient/static/js/criminals.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -154,6 +173,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -164,17 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandRegistery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/ACommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandAuthor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/state/ApplicationState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/state/StateIdle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandTime.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/state/StateExecutingCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/CommandParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/helpers/weatherHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandWeather.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/BaseView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/common/BaseView.java" />
@@ -206,15 +215,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/DBServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/DBApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/db/server/XMLHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" />
-        <option value="$PROJECT_DIR$/webclient/static/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/PageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/HtmlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java" />
-        <option value="$PROJECT_DIR$/webclient/pages/main.html" />
         <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Template.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/JsHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiGETTestHandler.java" />
+        <option value="$PROJECT_DIR$/webclient/static/css/main.css" />
+        <option value="$PROJECT_DIR$/webclient/pages/main.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiPostHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/ServerApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/CriminalsApiHandler.java" />
+        <option value="$PROJECT_DIR$/webclient/static/js/main.js" />
+        <option value="$PROJECT_DIR$/database/structure/tables/Criminals.xml" />
+        <option value="$PROJECT_DIR$/webclient/static/css/criminals.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiCriminalsHandler.java" />
+        <option value="$PROJECT_DIR$/webclient/pages/criminals.html" />
+        <option value="$PROJECT_DIR$/webclient/static/js/criminals.js" />
       </list>
     </option>
   </component>
@@ -255,7 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,6 +286,19 @@
               <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
               <item name="Steve" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="structure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="structure" type="462c0819:PsiDirectoryNode" />
+              <item name="tables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
@@ -293,6 +325,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com.javacore.steve" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com.javacore.steve" type="462c0819:PsiDirectoryNode" />
+              <item name="appserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com.javacore.steve" type="462c0819:PsiDirectoryNode" />
+              <item name="dbservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com.javacore.steve" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
@@ -329,19 +388,28 @@
             </path>
             <path>
               <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Steve" type="462c0819:PsiDirectoryNode" />
+              <item name="webclient" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Steve" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557166914110" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557772869322" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/weatherlibraryjava.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -349,11 +417,14 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Zstudent\IdeaProjects\Steve\src\main\java\com.javacore.steve" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zstudent\IdeaProjects\Steve\webclient\static" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.javacore.steve.db.server" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Zstudent\IdeaProjects\Steve\src\main\java\com.javacore.steve" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -462,14 +533,20 @@
       <option name="project" value="LOCAL" />
       <updated>1556562251501</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="version 0.0.6">
+      <created>1557166945844</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557166945844</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -478,7 +555,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21222222" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21222222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39960822" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -497,7 +574,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -506,7 +583,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16333333" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21222222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39960822" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -530,114 +607,14 @@
     <MESSAGE value="version 0.0.2" />
     <MESSAGE value="version 0.0.3" />
     <MESSAGE value="version 0.0.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.0.5" />
+    <MESSAGE value="version 0.0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.0.6" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="838" column="23" selection-start-line="838" selection-start-column="23" selection-end-line="838" selection-end-column="23" />
-          <folding>
-            <element signature="e#31007#31008#0" expanded="true" />
-            <element signature="e#31039#31040#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="151" column="16" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/profile/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="533" column="18" selection-start-line="533" selection-start-column="18" selection-end-line="533" selection-end-column="18" />
-          <folding>
-            <element signature="e#17066#17067#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/DataBase.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/profile/ProfilePhotoView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/common/BaseView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/common/CompositeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/Record.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/profile/ProfileStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/common/ConsoleCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/common/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/profile/ProfileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/commands/CommandTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -776,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/com/sun/net/httpserver/HttpExchange.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/dbstate/DBState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -877,55 +847,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webclient/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/StateHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/DBServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="79" lean-forward="true" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/XMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -937,30 +865,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/DBServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/dbservice/server/XMLHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/HtmlHandler.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/com/sun/net/httpserver/HttpHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/CssHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/JsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webclient/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/HtmlHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/helpers/CommandParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiGETTestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/com/sun/net/httpserver/HttpExchange.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/structure/tables/Criminals.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webclient/static/css/criminals.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/WebClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/ServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -969,15 +1003,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webclient/pages/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="51">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/Template.java">
+    <entry file="file://$PROJECT_DIR$/webclient/pages/criminals.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiPostHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/appserver/CriminalsApiHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.javacore.steve/webservice/ApiCriminalsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webclient/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webclient/static/js/criminals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>

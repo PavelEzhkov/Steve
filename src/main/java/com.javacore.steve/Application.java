@@ -1,5 +1,6 @@
 package com.javacore.steve;
 
+import com.javacore.steve.appserver.ServerApplication;
 import com.javacore.steve.dbservice.DBApplication;
 import com.javacore.steve.dbservice.server.DBServer;
 import com.javacore.steve.state.ApplicationState;
@@ -25,6 +26,7 @@ public class Application {
     public static void main(String[] args) throws Exception {
 
         WebClientApplication.INSTANCE.start();
+        ServerApplication.INSTANCE.start();
         /*
         DBApplication.INSTANCE.start();
 

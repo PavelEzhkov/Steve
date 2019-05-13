@@ -7,7 +7,7 @@
         <column systemName="nickname" displayName="Nickname"/>
         <column systemName="criminalFamilyId" displayName="Criminal family ID"/>
         <column systemName="dateOfBirth" displayName="Date of birth"/>
-        <column systemName="Deceased" displayName="Deceased"/>
+        <column systemName="deceased" displayName="Deceased"/>
         <column systemName="dateOfDeath" displayName="Date of death"/>
         <column systemName="numberOfCrimes" displayName="Number of crimes"/>
     </columns>

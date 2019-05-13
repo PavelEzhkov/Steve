@@ -15,6 +15,10 @@ public enum WebClientApplication {
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 10);
         server.createContext("/pages/", new HtmlHandler());
         server.createContext("/static", new CssHandler());
+        server.createContext("/js", new JsHandler());
+        server.createContext("/api/get", new ApiGETTestHandler());
+        server.createContext("/api/testpost", new ApiPostHandler());
+        server.createContext("/api/criminals", new ApiCriminalsHandler());
         server.start();
         String massage = String.format("%s is running on port: %d", APP_NAME, server.getAddress().getPort());
         System.out.println(massage);
