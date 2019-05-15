@@ -33,6 +33,36 @@ public class Table {
     public void save() {
     }
 
+    public List<List<String>> collect(String[] fields) {
+        List<List<String>> result = new ArrayList<>();
+        int[] indexes = new int[fields.length];
+        for (int i = 0, len = fields.length; i < len; i++) {
+            int index = getFieldIndex(fields[i]);
+            if (index != -1) {
+                indexes[i] = index;
+            }
+            System.out.print(fields[i]);
+        }
+        for (TableRow row : rows) {
+            result.add(collectFieldValues(indexes, row));
+        }
+        return result;
+    }
+
+    public List<String> collectFieldValues(int[] indexes, TableRow row) {
+        List<String> result = new ArrayList<>();
+        for (int i : indexes) {
+            result.add(row.getValues().get(i));
+        }
+        return result;
+    }
+
+    public int getFieldIndex(String fieldName) {
+        return metaData.getColumnIndex(fieldName);
+    }
+
+
+
     public List<TableRow> select(List<String> columns) {
         if (columns.get(0).equals("*"))
             return rows;

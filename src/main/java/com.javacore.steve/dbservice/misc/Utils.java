@@ -11,6 +11,49 @@ import java.util.List;
 
 public class Utils {
 
+    public static void readStream(final InputStream inputStream, DataHandler handler) {
+        BufferedReader br;
+        try {
+            br = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            while ((line = br.readLine()) != null) {
+                handler.handleString(line);
+            }
+        } catch (FileNotFoundException fnfe) {
+            fnfe.printStackTrace();
+        } catch (IOException ioex) {
+            ioex.printStackTrace();
+        } finally {
+            try {
+                inputStream.close();
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static byte[] readBytes(String fileName) {
+        BufferedReader br;
+        FileInputStream fis = null;
+        byte[] b = null;
+        try {
+            fis = new FileInputStream(fileName);
+            b = new byte[fis.available()];
+            fis.read(b);
+        } catch (FileNotFoundException fnfe) {
+            fnfe.printStackTrace();
+        } catch (IOException ioex) {
+            ioex.printStackTrace();
+        } finally {
+            try {
+                fis.close();
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return b;
+    }
+
     public static void readFileLineByLine(String fileName, DataHandler handler) {
         FileInputStream fis = null;
         BufferedReader br;

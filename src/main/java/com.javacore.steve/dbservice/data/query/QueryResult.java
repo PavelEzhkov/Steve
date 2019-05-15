@@ -1,4 +1,4 @@
-package com.javacore.steve.dbservice.data;
+package com.javacore.steve.dbservice.data.query;
 
 public class QueryResult {
     Status status;

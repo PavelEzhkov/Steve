@@ -30,13 +30,13 @@ public class Application {
 
 
         DBApplication.INSTANCE.start();
-
-        String query = "SELECT * FROM Criminals WHERE id = 3";
-
-        String xml = DBApplication.INSTANCE.selectXML(query);
-        System.out.println(xml);
-
-        DBServer.INSTANCE.showSelect(xml);
+//
+//        String query = "SELECT * FROM Criminals WHERE id = 3";
+//
+//        String xml = DBApplication.INSTANCE.selectXML(query);
+//        System.out.println(xml);
+//
+//        DBServer.INSTANCE.showSelect(xml);
 
 
 
