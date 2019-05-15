@@ -1,4 +1,4 @@
-package com.javacore.steve.helpers;
+package com.javacore.steve.dbservice;
 
 import java.util.ArrayList;
 import java.util.List;

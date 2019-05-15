@@ -1,4 +1,6 @@
-package com.javacore.steve.common;
+package com.javacore.steve.consolservice.common;
+
+import com.javacore.steve.appserver.common.Canvas;
 
 public class ConsoleCanvas extends Canvas {
 

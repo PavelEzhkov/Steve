@@ -1,4 +1,4 @@
-package com.javacore.steve.helpers;
+package com.javacore.steve.consolservice.common;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

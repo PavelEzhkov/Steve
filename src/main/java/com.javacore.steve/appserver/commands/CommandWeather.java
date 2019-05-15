@@ -1,7 +1,7 @@
-package com.javacore.steve.commands;
+package com.javacore.steve.appserver.commands;
 
 
-import com.javacore.steve.helpers.WeatherHelper;
+import com.javacore.steve.consolservice.common.WeatherHelper;
 
 public class CommandWeather extends ACommand {
     CommandWeather(String name, String description) {

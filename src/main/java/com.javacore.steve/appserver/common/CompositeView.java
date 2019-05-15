@@ -1,4 +1,4 @@
-package com.javacore.steve.common;
+package com.javacore.steve.appserver.common;
 
 import java.util.ArrayList;
 import java.util.List;

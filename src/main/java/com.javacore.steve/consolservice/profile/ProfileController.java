@@ -1,6 +1,8 @@
-package com.javacore.steve.profile;
+package com.javacore.steve.consolservice.profile;
 
-import com.javacore.steve.common.ConsoleCanvas;
+import com.javacore.steve.appserver.profile.ProfileModel;
+import com.javacore.steve.appserver.profile.ProfileStore;
+import com.javacore.steve.consolservice.common.ConsoleCanvas;
 
 public class ProfileController {
     private ProfileModel profileModel;

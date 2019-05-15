@@ -1,4 +1,4 @@
-package com.javacore.steve.state;
+package com.javacore.steve.appserver.state;
 
 public abstract class ApplicationState {
     public abstract void enter(String commandName);

@@ -1,4 +1,6 @@
-package com.javacore.steve.profile;
+package com.javacore.steve.appserver.profile;
+
+import com.javacore.steve.appserver.profile.ProfileModel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +8,7 @@ import java.util.Map;
 public enum ProfileStore {
     INSTANSE;
 
-    Map<Integer,ProfileModel> profiles;
+    Map<Integer, ProfileModel> profiles;
 
     {
         profiles = new HashMap<>();

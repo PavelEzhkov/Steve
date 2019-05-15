@@ -1,7 +1,8 @@
-package com.javacore.steve.profile;
+package com.javacore.steve.consolservice.profile;
 
-import com.javacore.steve.common.BaseView;
-import com.javacore.steve.common.Canvas;
+import com.javacore.steve.appserver.common.BaseView;
+import com.javacore.steve.appserver.common.Canvas;
+import com.javacore.steve.appserver.profile.ProfileModel;
 
 public class ProfileTextView extends BaseView {
 

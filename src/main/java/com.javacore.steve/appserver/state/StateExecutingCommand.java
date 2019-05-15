@@ -1,8 +1,8 @@
-package com.javacore.steve.state;
+package com.javacore.steve.appserver.state;
 
 import com.javacore.steve.Application;
-import com.javacore.steve.commands.ACommand;
-import com.javacore.steve.commands.CommandRegistry;
+import com.javacore.steve.appserver.commands.ACommand;
+import com.javacore.steve.appserver.commands.CommandRegistry;
 
 public class StateExecutingCommand extends ApplicationState {
     @Override

@@ -1,6 +1,7 @@
 package com.javacore.steve.dbservice;
 
 
+import com.javacore.steve.appserver.CriminalsApiHandler;
 import com.javacore.steve.dbservice.data.QueryResult;
 import com.javacore.steve.dbservice.data.Table;
 import com.javacore.steve.dbservice.data.TableMetaData;
@@ -10,8 +11,10 @@ import com.javacore.steve.dbservice.dbstate.DBStateInit;
 import com.javacore.steve.dbservice.dbstate.DBStateRunning;
 import com.javacore.steve.dbservice.dbstate.DBStateStop;
 import com.javacore.steve.dbservice.server.DBServer;
-import com.javacore.steve.helpers.CommandParser;
+import com.sun.net.httpserver.HttpServer;
 
+import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,7 +34,8 @@ public enum DBApplication {
     public DBState stateRun = new DBStateRunning("Running");
     public DBState stateStop = new DBStateStop("Stop");
 
-    public void start() {
+
+    public void start() throws IOException {
         changeState(stateInit);
         tables = DBServer.INSTANCE.getTables();
     }

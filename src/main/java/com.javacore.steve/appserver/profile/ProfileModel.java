@@ -1,13 +1,10 @@
-package com.javacore.steve.profile;
+package com.javacore.steve.appserver.profile;
 
-import com.javacore.steve.common.BaseModel;
+import com.javacore.steve.appserver.common.BaseModel;
 
 
-import java.text.DateFormat;
 import java.text.Format;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class ProfileModel extends BaseModel {

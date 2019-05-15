@@ -1,4 +1,4 @@
-package com.javacore.steve.commands;
+package com.javacore.steve.appserver.commands;
 
 /**
  * Extend {@link ACommand} to show commands list

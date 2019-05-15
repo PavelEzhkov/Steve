@@ -1,9 +1,9 @@
 package com.javacore.steve;
 
 import com.javacore.steve.appserver.ServerApplication;
+import com.javacore.steve.appserver.state.ApplicationState;
 import com.javacore.steve.dbservice.DBApplication;
 import com.javacore.steve.dbservice.server.DBServer;
-import com.javacore.steve.state.ApplicationState;
 import com.javacore.steve.webservice.WebClientApplication;
 
 /**
@@ -27,7 +27,8 @@ public class Application {
 
         WebClientApplication.INSTANCE.start();
         ServerApplication.INSTANCE.start();
-        /*
+
+
         DBApplication.INSTANCE.start();
 
         String query = "SELECT * FROM Criminals WHERE id = 3";
@@ -36,7 +37,7 @@ public class Application {
         System.out.println(xml);
 
         DBServer.INSTANCE.showSelect(xml);
-*/
+
 
 
        // MainDataEncryptor encryptor = new MainDataEncryptor();

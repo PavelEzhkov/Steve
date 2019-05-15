@@ -1,4 +1,4 @@
-package com.javacore.steve.state;
+package com.javacore.steve.appserver.state;
 
 import com.javacore.steve.Application;
 

@@ -1,4 +1,4 @@
-package com.javacore.steve.commands;
+package com.javacore.steve.appserver.commands;
 
 import java.util.HashMap;
 import java.util.Map;

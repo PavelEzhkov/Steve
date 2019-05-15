@@ -1,9 +1,9 @@
-package com.javacore.steve.commands;
+package com.javacore.steve.appserver.commands;
 
-import com.javacore.steve.common.ConsoleCanvas;
+import com.javacore.steve.consolservice.common.ConsoleCanvas;
 
-import com.javacore.steve.profile.ProfileModel;
-import com.javacore.steve.profile.ProfileView;
+import com.javacore.steve.appserver.profile.ProfileModel;
+import com.javacore.steve.consolservice.profile.ProfileView;
 
 import java.util.GregorianCalendar;
 
