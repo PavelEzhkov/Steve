@@ -4,6 +4,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Lessons {
+
+
     public static final String OP_GROUP = "^(SELECT|DELETE)";
     public static final String FLD_GROUP = "([*a-zA-Z, ]+)";
     public static final String SPACE = "([\\s]+)";
@@ -12,14 +14,18 @@ public class Lessons {
 
 
     public static void main(String[] args) {
-        
+
+
+
+
+    }
 
 
         /**
          * патерн композит
          */
 
-
+/*
         String query = "SELECT id, firstName, lastName, FROM Criminals";
         Pattern p = Pattern.compile(OP_GROUP + SPACE + FLD_GROUP + SPACE + FROM_GROUP + SPACE + TBL_GROUP);
         Matcher matcher = p.matcher(query);
@@ -32,7 +38,7 @@ public class Lessons {
                  System.out.println(s);
             }
         }
-    }
+    }*/
 /*
     public static void iteratorCleanup(List<String> list, String filter){
         Iterator<String> it = list.iterator();

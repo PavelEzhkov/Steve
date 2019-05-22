@@ -1,31 +1,24 @@
 package com.javacore.steve.dbservice;
 
 
-import com.javacore.steve.appserver.CriminalsApiHandler;
-
 import com.javacore.steve.dbservice.data.Table;
-import com.javacore.steve.dbservice.data.TableMetaData;
-import com.javacore.steve.dbservice.data.TableRow;
 import com.javacore.steve.dbservice.data.query.QueryResult;
 import com.javacore.steve.dbservice.dbstate.DBState;
 import com.javacore.steve.dbservice.dbstate.DBStateInit;
 import com.javacore.steve.dbservice.dbstate.DBStateRunning;
 import com.javacore.steve.dbservice.dbstate.DBStateStop;
-import com.javacore.steve.dbservice.server.DBServer;
-import com.sun.net.httpserver.HttpServer;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.util.Arrays;
+import com.javacore.steve.dbservice.test.Test;
+
+import java.lang.reflect.Method;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public enum DBApplication {
     INSTANCE;
 
-   // List<Table> tables;
-   private Map<String, Table> tables = new HashMap<>();
+    // List<Table> tables;
+    private Map<String, Table> tables = new HashMap<>();
 
     public static final String DATA_ENCRYPTION_LEVEL = "LOW";
     public static final int TABLE_NAME = 3;
@@ -39,10 +32,38 @@ public enum DBApplication {
     public DBState stateStop = new DBStateStop("Stop");
 
 
-    public void start() throws IOException {
-        changeState(stateInit);
+    public void start() {
+        boolean testEnabled = Boolean.valueOf(System.getProperty("et"));
+        if (testEnabled) {
+            try {
+                runTests("com.javacore.steve.dbservice.test.WHERETest");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        //     changeState(stateInit);
 
     }
+
+    private void runTests(String classNAme) throws Exception {
+        int passed = 0;
+        int failed = 0;
+        for (Method m: Class.forName(classNAme).getMethods()){
+            Test testAnnotation = m.getAnnotation(Test.class);
+            if (testAnnotation != null && testAnnotation.enabled()){
+                try {
+                    m.invoke(null);
+                    passed++;
+                } catch (Throwable ex){
+                    System.out.printf("Test %s failed: %s \n", m, ex.getCause());
+                    failed++;
+                }
+            }
+        }
+        System.out.printf("Passed: %d, Failed: %d", passed, failed);
+    }
+
 
     public void stop() {
         currentState.onStop();

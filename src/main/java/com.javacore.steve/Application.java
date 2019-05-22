@@ -23,10 +23,10 @@ public class Application {
     //private static DataBase dataBase;
 
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        WebClientApplication.INSTANCE.start();
-        ServerApplication.INSTANCE.start();
+       // WebClientApplication.INSTANCE.start();
+       // ServerApplication.INSTANCE.start();
 
 
         DBApplication.INSTANCE.start();
